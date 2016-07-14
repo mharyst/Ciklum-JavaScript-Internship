@@ -1,0 +1,15 @@
+{
+  "name": "ciklum-js-internship",
+  "version": "1.0.0",
+  "description": "Test task for Ciklum JS Internship in Kyiv.",
+  "scripts": {
+    "start": "http-server -a 127.0.0.1 -p 8880 ./src",
+    "watch": "node-sass -w --source-map src/css/style.css.map --output-style compressed src/sass/main.scss -o src/css/"
+  },
+  "repository": "https://github.com/mharyst/Ciklum-JavaScript-Internship",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^0.9.0",
+    "node-sass": "^3.8.0"
+  }
+}

@@ -4,7 +4,7 @@
   "description": "Test task for Ciklum JS Internship in Kyiv.",
   "scripts": {
     "start": "http-server -a 127.0.0.1 -p 8880 ./src",
-    "watch": "node-sass -w --source-map src/css/style.css.map --output-style compressed src/sass/main.scss -o src/css/"
+    "watch": "node-sass -w --source-map src/css/style.css.map --output-style compressed src/sass/style.scss -o src/css/"
   },
   "repository": "https://github.com/mharyst/Ciklum-JavaScript-Internship",
   "license": "MIT",

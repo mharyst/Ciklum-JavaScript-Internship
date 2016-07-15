@@ -1,0 +1,66 @@
+.oculus {
+  width: 100%;
+  font-family: $font-oculus;
+  margin: 0 auto;
+  .offers {
+    li {
+      float: left;
+      width: 33.33333333%;
+      background: #282828;
+      height: 300px;
+      overflow: hidden;
+      position: relative;
+      &:hover {
+        .background {
+          opacity: .8;
+          transform: scale(1.1, 1.1);
+        }
+      }
+      a {
+        display: block;
+        color: #8d8e8f;
+        .background {
+          background-position: center center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          height: 300px;
+          opacity: .3;
+          text-align: center;
+          transition: transform .3s, opacity .3s;
+          width: 100%;
+          &.lucky {
+            background-image: url(../img/oculus-luckys-tale.jpg);
+          }
+          &.valkyrie {
+            background-image: url(../img/oculus-eve-valkyrie.jpg);
+          }
+          &.stage {
+            background-image: url(../img/oculus-oc3-stage-image.jpg);
+          }
+        }
+        .headings {
+          box-sizing: border-box;
+          padding: 0 32px;
+          position: absolute;
+          top: 50%;
+          transform: translate(0, -50%);
+          width: 100%;
+          font-weight: 600;
+          margin: 0;
+          text-align: center;
+          h4 {
+            font-size: 12px;
+            letter-spacing: 2px;
+            line-height: 16px;
+            text-transform: uppercase;
+          }
+          h3 {
+            color: #fff;
+            font-size: 22px;
+            line-height: 28px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -2,14 +2,65 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Document</title>
+  <title>Task for Ciklum JavaScript Internship</title>
+  <link href="css/reset.css" rel="stylesheet" type="text/css">
+  <!-- <link href="libs/normalize.css" rel="stylesheet" type="text/css"> -->
+  <link href="libs/shell.min.css" rel="stylesheet" type="text/css">
+  <link href="css/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
   <header>
-
+    <div class="header-wrapper">
+      <div class="brand">
+        <a href="#"><img src="img/microsoft-logo.png" alt="Microsoft Logo"></a>
+      </div>
+      <ul class="header-list">
+        <li class="store">
+          <a href="#">Store</a>
+          <div class="dropdown">
+            <ul class="dropdown-list">
+							<li><a href="#">Store Home</a></li>
+							<li><a href="#">Devices</a></li>
+							<li><a href="#">Software</a></li>
+							<li><a href="#">Apps</a></li>
+							<li><a href="#">Games</a></li>
+							<li><a href="#">Entertainment</a></li>
+							<li><a href="#">Business &amp; Education</a></li>
+							<li><a href="#">Sale</a></li>
+							<li><a href="#">Find a store</a></li>
+							<li><a href="#">Gift Cards</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="products">
+          <a href="#">Products</a>
+          <div class="dropdown">
+            <ul class="dropdown-list">
+							<li><a href="#">Software &amp; services</a></li>
+							<li><a href="#">Devices &amp; Xbox</a></li>
+							<li><a href="#">For business</a></li>
+							<li><a href="#">For developers &amp; IT pros</a></li>
+							<li><a href="#">For students &amp; educators</a></li>
+						</ul>
+          </div>
+        </li>
+        <li class="support"><a href="#">Support</a></li>
+      </ul>
+      <div class="nav-right">
+        <div class="search">
+          <input type="search" placeholder="Search Microsoft.com" title="Search Microsoft.com">
+          <button type="submit" title="search"><i class="shell-icon-search"></i></button>
+        </div>
+        <div class="menu-toogle">
+          <button class="toogle menu" type="button" name="Toogle menu"><i class="icon-menu"></i></button>
+        </div>
+        <div class="cart"><a href="#"><i class="shell-icon-cart"></i><span>0</span></a></div>
+        <div class="user">Sign in</div>
+      </div>
+    </div>
   </header>
   <main>
-    <section>
+    <section class="dropbox">
       <div class="hero"></div>
       <div class="hero-content">
         <h1>Collaborate faster and more securely</h1>

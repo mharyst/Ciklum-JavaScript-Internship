@@ -2,6 +2,7 @@ $font-microsoft: "Segoe UI", Arial, sans-serif !default;
 $font-dropbox: "Open Sans","lucida grande","Segoe UI",arial,verdana,"lucida sans unicode",tahoma,sans-serif !default;
 $font-invision: "Open Sans", "open-sans", sans-serif !default;
 $font-oculus: "Open Sans", "open-sans", sans-serif !default;
+$font-apple: "Myriad Set Pro","Helvetica Neue","Helvetica","Arial",sans-serif !default;
 
 //Colors
 //  Microsoft
@@ -51,6 +52,19 @@ $ms-screen-sm: 710px !default;
 	src:url('../fonts/shell-icons-0.4.0.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
+}
+
+@font-face {
+	font-family:'Myriad Set Pro';
+	font-style:normal;
+	font-weight:400;
+	src:url("../fonts/myriad-set-pro_text.woff") format("woff");
+}
+@font-face {
+	font-family:'Myriad Set Pro';
+	font-style:normal;
+	font-weight:600;
+	src:url("../fonts/myriad-set-pro_semibold.woff") format("woff");
 }
 
 @import "_microsoft.scss";

@@ -16,6 +16,14 @@ $in-font-color: #747c83;
 //  Microsoft
 $ms-screen-md: 992px !default;
 $ms-screen-sm: 810px !default;
+$ms-screen-xs: 560px !default;
+//  Dropbox
+$db-screen-lg: 1771px !default;
+$db-screen-md: 1200px !default;
+$db-screen-sm: 600px !default;
+$db-screen-xs: 400px !default;
+//  Invision
+$in-screen-sm: 1032px !default;
 
 // Mixin
 @mixin translateX($translatex) {

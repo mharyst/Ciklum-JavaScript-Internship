@@ -6,23 +6,19 @@
   height: 700px;
   margin: 0 auto;
   .hero-background {
+    padding: 0;
     position: absolute;
-    background-image: url(../img/dropbox-background.jpg);
-    background-position: right center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 1770px;
+    top: 0;
+    width: 100%;
     height: 100%;
-    left: 50%;
-    margin-left: -885px;
   }
   .hero-container {
-    min-height: 550px;
-    max-width: 990px;
-    position: relative;
     margin: 0 auto;
-    padding: 75px 20px;
-    text-align: left;
+    max-width: 990px;
+    box-sizing: content-box;
+    position: relative;
+    padding: 20px;
+    min-height: 400px;
     .hero-content {
       position: absolute;
       top: 50%;
@@ -75,6 +71,58 @@
           }
         }
       }
+    }
+  }
+  @media screen and (min-width :$db-screen-xs) {
+    .hero-background {
+      background-image: url(../img/dropbox-background.jpg);
+      background-position: 370px center;
+      background-position: 300px center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+  @media screen and (min-width :$db-screen-sm) {
+    .hero-background {
+      background-position: 370px center;
+      background-repeat: no-repeat;
+    }
+  }
+  @media screen and (min-width :$db-screen-md) {
+    .hero-background {
+      width: 1770px;
+      position: absolute;
+      left: 50%;
+      margin-left: -885px;
+      background-position: right center;
+      background-size: contain;
+    }
+  }
+  @media screen and (min-width :$db-screen-lg) {
+    .hero-background {
+      width: 100%;
+    }
+  }
+  @media screen and (min-width: 400px) {
+    .hero-container {
+      text-align: left;
+      margin: 0;
+      padding-top: 45px;
+      padding-bottom: 45px;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    .hero-container {
+      text-align: left;
+      padding-top: 75px;
+      padding-bottom: 75px;
+      min-height: 550px;
+    }
+  }
+  @media screen and (min-width: 991px) {
+    .hero-container {
+      position: relative;
+      margin: 0 auto;
     }
   }
 }

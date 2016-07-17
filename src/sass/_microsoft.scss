@@ -272,10 +272,21 @@ header {
           li {
             position: relative;
             float: none;
+            &:hover {
+              background-color: #e5e5e5;
+            }
             &.dropdown a:after{
               position: absolute;
             }
           }
+        }
+      }
+    }
+    @media screen and (max-width :$ms-screen-xs) {
+      .header-list {
+        &.opened {
+          width: 100%;
+          max-width: none;
         }
       }
     }

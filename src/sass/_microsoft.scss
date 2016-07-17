@@ -22,24 +22,135 @@ header {
     ul.header-list {
       float: left;
       margin: 0 0 0 18px;
+      font-size: 15px;
       li {
         float: left;
         cursor: pointer;
         transition: background-color .5s;
+        &.active {
+          background: $color-hover;
+        }
         &:hover {
           background: $color-hover;
           transition: background-color 0s;
+        }
+        &.dropdown a {
+          &:after {
+            content: "";
+            display: block;
+            width: 1em;
+            height: 1em;
+            font-family: "shell-icons";
+            font-style: normal;
+            font-weight: normal;
+            line-height: 1.1;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            position: absolute;
+            top: 21px;
+            right: 28px;
+            font-size: 6px;
+            font-weight: bold;
+            position: static;
+            display: inline-block;
+            margin-left: 1em;
+            vertical-align: middle;
+          }
+
         }
         a {
           line-height: 48px;
           color: $font-color;
           padding: 0 1.5em;
-          &:after {
+        }
+        .dropdown-content {
+          z-index: 1;
+          position: absolute;
+        }
+        .dropdown-list {
+          z-index: 1;
+          position: absolute;
+          li {
+            height: 0px;
+            transition: height .2s, background-color ease-out .5s;
+            width: 238px;
+            background-color: $color-hover;
+            a {
+              visibility: hidden;
+              opacity: 0;
+              &:after {
+                margin: 20px;
+                float: right;
+                -webkit-transform: rotate(-90deg);
+                transform: rotate(-90deg);
+              }
+            }
+            &:hover {
+              background-color: #e5e5e5;
+              transition: background-color .0s;
+            }
+            &.hovered {
+              .tab-list {
+                display: block;
+              }
+            }
+            .tab-list {
+              display: none;
+              overflow: hidden;
+              position: absolute;
+              width: 300px;
+              z-index: 2;
+              top: 0;
+              left: 238px;
+              li {
+                width: 100%;
+                margin: 0;
+                padding: 0;
+                background-color: #e5e5e5;
+                a {
+                  padding: 17px 24px;
+                  &:after {
+                    display: none;
+                  }
+                }
+                &:hover {
+                  background-color: #d9d9d9;
+                  text-decoration: underline;
+                }
+              }
+            }
+
+          }
+          .single {
+            &:hover a {
+              text-decoration: underline;
+            }
+            a:after {
+              display: none;
+            }
           }
         }
-        .dropdown {
-          display: none;
+        &.active {
+          .dropdown-content {
+            display: block;
+            .dropdown-list li {
+              height: 50px;
+              a {
+                visibility: visible;
+                opacity: 1;
+                transition: visibility .2s, opacity .2s linear;
+              }
+            }
+          }
         }
+      }
+      .store.active .tab-list {
+        background-color: #e5e5e5;
+        min-height: 500px;
+      }
+      .products.active .tab-list {
+        background-color: #e5e5e5;
+        min-height: 250px;
       }
     }
     .nav-right {
@@ -85,25 +196,33 @@ header {
             color: $font-color;
           }
         }
-        button {
-          height: 100%;
-          background-color: transparent;
-          border: 0;
-          float: left;
-          padding: 0;
-          width: 33px;
-          cursor: pointer;
-          i {
-            font-size: 17px;
-            color: $ms-icon-color;
-          }
-          &:hover i {
-            color: #0072c6;
-          }
+      }
+      button {
+        height: 100%;
+        background-color: transparent;
+        border: 0;
+        float: left;
+        padding: 0;
+        width: 33px;
+        cursor: pointer;
+        i {
+          font-size: 17px;
+          color: $ms-icon-color;
+        }
+        &:hover i {
+          color: #0072c6;
         }
       }
       .menu-toogle {
         display: none;
+        @media screen and (max-width :$ms-screen-sm) {
+          display: block;
+        }
+        button {
+          height: 48px;
+          line-height: 48px;
+          width: 44px;
+        }
       }
       .cart {
         a {
@@ -130,6 +249,33 @@ header {
         &:hover {
           background-color: $color-hover;
           color: #0078d7;
+        }
+      }
+    }
+    @media screen and (max-width :$ms-screen-sm) {
+      .header-list {
+        width: 0;
+        height: 0;
+        opacity: 0;
+        background-color: $color-hover;
+        &.opened {
+          width: 80%;
+          opacity: 1;
+          transition: opacity .3s ease-out, width .3s ease-out;
+          height: calc(100% - 48px);
+          // display: block;
+          position: absolute;
+          margin-top: 48px;
+          right: 0;
+          z-index: 1000;
+          max-width: 300px;
+          li {
+            position: relative;
+            float: none;
+            &.dropdown a:after{
+              position: absolute;
+            }
+          }
         }
       }
     }

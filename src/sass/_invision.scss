@@ -67,6 +67,9 @@
           margin-bottom: 10px;
           padding-left: 84px;
         }
+        @media screen and (max-width :$screen-xs) {
+          padding-left: 48px;
+        }
       }
       @media screen and (max-width :$in-screen-sm) {
         width: 100%;

@@ -92,6 +92,9 @@ header {
             &.hovered {
               .tab-list {
                 display: block;
+                @media screen and (max-width :$ms-screen-sm) {
+                  display: none;
+                }
               }
             }
             .tab-list {
@@ -215,6 +218,15 @@ header {
       }
       .menu-toogle {
         display: none;
+        &.opened {
+          background-color: #e5e5e5;
+        }
+        &:hover {
+          background-color: $color-hover;
+          i {
+            color: $font-color;
+          }
+        }
         @media screen and (max-width :$ms-screen-sm) {
           display: block;
         }
@@ -252,6 +264,11 @@ header {
         }
       }
     }
+    @media screen and (max-width :$screen-xs) {
+      .user {
+        display: none;
+      }
+    }
     @media screen and (max-width :$ms-screen-sm) {
       .header-list {
         width: 0;
@@ -278,6 +295,31 @@ header {
             &.dropdown a:after{
               position: absolute;
             }
+          }
+        }
+        .dropdown-content {
+          width: 0;
+          display: none;
+          .dropdown-list {
+            position: relative;
+            width: 100%;
+            li {
+              width: 100%;
+              background-color: #e5e5e5;
+              &:hover {
+                background-color: #d9d9d9;
+              }
+            }
+            a::after {
+              margin: 0;
+              right: 14px;
+            }
+          }
+        }
+        .dropdown.active {
+          .dropdown-content {
+            width: 100%;
+            display: block;
           }
         }
       }

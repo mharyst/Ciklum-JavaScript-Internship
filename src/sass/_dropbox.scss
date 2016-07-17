@@ -28,6 +28,11 @@
       max-width: 440px;
       color: #47525d;
       font-weight: 100;
+      @media screen and (max-width :$screen-xs) {
+        top: 15%;
+        transform: none;
+        -webkit-transform: none;
+      }
       h1 {
         font-size: 47.25px;
         margin-bottom: 20px;

@@ -15,6 +15,10 @@ footer {
       .column {
         width: 20%;
         float: left;
+        @media screen and (max-width: $screen-sm) {
+          width: 100%;
+          font-size: 17px;
+        }
         h3 {
           color: #333;
           font-weight: 600;
@@ -30,6 +34,43 @@ footer {
             &:hover {
               color: #333;
               text-decoration: underline;
+            }
+          }
+        }
+      }
+      @media screen and (max-width: $screen-sm) {
+        .column-content {
+          border-bottom: 1px solid #e3e3e3;
+          overflow: hidden;
+          h3 {
+            cursor: pointer;
+            font-weight: 400;
+            line-height: 2.78571;
+            &:after {
+              content: '+';
+              float: right;
+              font-weight: normal;
+              margin-right: 8px;
+              -webkit-transition: -webkit-transform .3s ease;
+              transition: transform .3s ease;
+            }
+          }
+          ul {
+            display: none;
+          }
+          &.opened ul {
+            display: block;
+            font-size: 17px;
+          }
+          &.opened {
+            h3::after {
+              -webkit-transform: rotate(45deg) scale(1.08);
+              transform: rotate(45deg) scale(1.08);
+            }
+            ul li a {
+              padding: 0 14px;
+              display: block;
+              line-height: 3;
             }
           }
         }
@@ -98,6 +139,19 @@ footer {
           content: ' ';
           display: table;
           clear: both;
+        }
+      }
+      @media screen and (max-width: $screen-sm) {
+        .shop {
+          border-bottom: none;
+        }
+        .locale {
+          float: none;
+          position: relative;
+          z-index: 1;
+        }
+        .legal {
+          padding-top: 13px;
         }
       }
     }

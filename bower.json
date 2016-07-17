@@ -1,0 +1,17 @@
+{
+  "name": "ciklum-js-internship",
+  "description": "Test task for Ciklum JS Internship in Kyiv.",
+  "main": "",
+  "authors": [
+    "mharyst <mykhailo.haryst@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/mharyst/Ciklum-JavaScript-Internship",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

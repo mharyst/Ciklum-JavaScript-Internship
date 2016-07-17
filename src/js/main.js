@@ -41,9 +41,7 @@ document.querySelector('.menu-toogle button').addEventListener('click', function
 var columns = document.querySelectorAll('footer .top .column .column-content');
 [].forEach.call(columns, function (column) {
   column.addEventListener('click', function () {
-    // var columnH3 = column + ' .heading';
     var columnID = '#' + column.id;
-    console.log(columnID);
     column.classList.toggle('opened');
   });
 });

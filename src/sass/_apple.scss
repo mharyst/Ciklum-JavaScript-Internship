@@ -19,6 +19,12 @@ footer {
           width: 100%;
           font-size: 17px;
         }
+        .column-content ~ .column-content {
+          padding-top: 20px;
+          @media screen and (max-width: $screen-sm) {
+            padding-top: 0;
+          }
+        }
         h3 {
           color: #333;
           font-weight: 600;

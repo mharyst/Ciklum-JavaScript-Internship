@@ -2,4 +2,4 @@
 
 Test task for Ciklum JS Internship in Kyiv (using HTML, SASS, JS, Gulp).
 
-Live version available at http://ciklum-js-internship.tk
+Live version available at https://mharyst.github.io/Ciklum-JavaScript-Internship/
